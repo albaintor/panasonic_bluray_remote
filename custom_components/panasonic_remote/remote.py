@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import time
+from datetime import timedelta
 from typing import Iterable, Any
 
 from panacotta import PanasonicBD
@@ -69,8 +70,7 @@ class PanasonicBluRayRemote(RemoteEntity):
     """Representation of a Panasonic Blu-ray device."""
 
     _attr_icon = "mdi:disc-player"
-    _attr_supported_features: RemoteEntityFeature = RemoteEntityFeature()
-    _attr_supported_features = ( )
+    _attr_supported_features: RemoteEntityFeature = RemoteEntityFeature(0)
 
     def __init__(self, ip, name):
         """Initialize the Panasonic Blue-ray device."""
