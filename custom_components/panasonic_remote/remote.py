@@ -1,7 +1,7 @@
 """Support for Panasonic Blu-ray players."""
 from __future__ import annotations
 
-from datetime import timedelta, time
+import time
 from typing import Iterable, Any
 
 from panacotta import PanasonicBD
@@ -19,7 +19,7 @@ from homeassistant.components.remote import (
     DEFAULT_HOLD_SECS,
     DEFAULT_NUM_REPEATS,
     RemoteEntity,
-    PLATFORM_SCHEMA
+    PLATFORM_SCHEMA, RemoteEntityFeature
 )
 
 from homeassistant.const import CONF_HOST, CONF_NAME
@@ -69,6 +69,7 @@ class PanasonicBluRayRemote(RemoteEntity):
     """Representation of a Panasonic Blu-ray device."""
 
     _attr_icon = "mdi:disc-player"
+    _attr_supported_features: RemoteEntityFeature = RemoteEntityFeature()
     _attr_supported_features = ( )
 
     def __init__(self, ip, name):
