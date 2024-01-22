@@ -75,6 +75,7 @@ class PanasonicBluRayRemote(RemoteEntity):
     def __init__(self, ip, name):
         """Initialize the Panasonic Blue-ray device."""
         self._attr_media_position_updated_at = None
+        _LOGGER.debug("init Panasonic %s, %s", ip, name)
         self._device = PanasonicBD(ip)
         self._state = None
         self._attr_name = name
@@ -86,6 +87,7 @@ class PanasonicBluRayRemote(RemoteEntity):
         # This can take 5+ seconds to complete
         state = self._device.get_play_status()
 
+        _LOGGER.debug("update panasonic remote state %s", state[0])
         if state[0] == "error":
             self._state = None
         elif state[0] in ["off", "standby"]:
@@ -136,8 +138,6 @@ class PanasonicBluRayRemote(RemoteEntity):
         delay_secs = kwargs.get(ATTR_DELAY_SECS, DEFAULT_DELAY_SECS)
         hold_secs = kwargs.get(ATTR_HOLD_SECS, DEFAULT_HOLD_SECS)
 
-        _LOGGER.debug("async_send_command %s %d repeats %d delay", ''.join(list(command)), num_repeats, delay_secs)
-
         for _ in range(num_repeats):
             for single_command in command:
                 # Not supported : hold and release modes
@@ -145,5 +145,6 @@ class PanasonicBluRayRemote(RemoteEntity):
                 #     self._device.send_key(single_command)
                 #     time.sleep(hold_secs)
                 # else:
-                self._device.send_key(single_command)
+                results = self._device.send_key(single_command)
+                _LOGGER.debug("send_command %s %d repeats %d delay : %s", ''.join(list(command)), num_repeats, delay_secs, results[0])
                 time.sleep(delay_secs)
