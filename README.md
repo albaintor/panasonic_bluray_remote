@@ -2,7 +2,7 @@
 
 This is a custom component to allow control of Panasonic Bluray Players [Homeassistant](https://home-assistant.io).
 
-It completes the existing Panasonic integration (media player) with the missing commands in a remote entity type.
+It is a fork of the existing Panasonic integration (media player) with the missing commands and an additional remote entity type.
 
 To make it work with latest UHD bluray players (such as UB820), you will have to enable voice control in the network menu AND to patch the Panasonic firmware (not an easy procedure).
 More information on [AVSForum](https://www.avforums.com/threads/lets-try-again-to-put-the-free-in-regionfreedom.2441584/post-31906429)
@@ -28,6 +28,10 @@ Use [HACS](https://hacs.xyz/).
 Edit `configuration.yaml` and add `panasonic_remote` as a new `remote`
 
 ```yaml
+media_player:
+  - platform: panasonic_remote
+    name: Panasonic Blu-Ray Media Player
+    host: 192.168.1.2
 remote:
   - platform: panasonic_remote
     name: Panasonic Blu-Ray remote

@@ -1,6 +1,6 @@
 from datetime import timedelta
 __version__ = "1.0.0"
-PROJECT_URL = "https://github.com/XXX"
+PROJECT_URL = "https://github.com/albaintor/panasonic_bluray_remote"
 ISSUE_URL = "{}issues".format(PROJECT_URL)
 
 NAME = "panasonicremote"

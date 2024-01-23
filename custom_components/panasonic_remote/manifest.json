@@ -1,10 +1,10 @@
 {
-  "domain": "panasonic_bluray_remote",
+  "domain": "panasonic_remote",
   "name": "Panasonic Blu-Ray Remote",
   "codeowners": [],
-  "documentation": "https://www.home-assistant.io/integrations/panasonic_bluray",
+  "documentation": "https://github.com/albaintor/panasonic_bluray_remote",
   "iot_class": "local_polling",
   "loggers": ["panacotta"],
-  "version": "0.0.1",,
+  "version": "0.0.1",
   "requirements": ["panacotta==0.2"]
 }
