@@ -1,4 +1,4 @@
-# Panasonic Bluray Players remote for Home Assistant
+# Panasonic Bluray Players for Home Assistant
 
 This is a custom component to allow control of Panasonic Bluray Players [Homeassistant](https://home-assistant.io).
 
@@ -13,30 +13,31 @@ Tested correctly on Panasonic UB820.
 **Recommanded**
 
 Use [HACS](https://hacs.xyz/).
+   1. From within Home Assistant, click on the link to **HACS**
+   2. Click on **Integrations**
+   3. Click on the vertical ellipsis in the top right and select **Custom repositories**
+   4. Enter the URL for this repository in the section that says _Add custom repository URL_ and select **Integration** in the _Category_ dropdown list
+   5. Click the **ADD** button
+   6. Close the _Custom repositories_ window
+   7. You should now be able to see the _Panasonic Bluray_ card on the HACS Integrations page. Click on **INSTALL** and proceed with the installation instructions.
+   8. Restart your Home Assistant instance and then proceed to the _Configuration_ section below.
 
 **Manual**
 
 1. Using the tool of choice open the directory (folder) for your HA configuration (where you find `configuration.yaml`).
 2. If you do not have a `custom_components` directory (folder) there, you need to create it.
-3. In the `custom_components` directory (folder) create a new folder called `panasonic_remote`.
-4. Download _all_ the files from the `custom_components/panasonic_remote/` directory (folder) in this repository.
+3. In the `custom_components` directory (folder) create a new folder called `panasonic_bluray`.
+4. Download _all_ the files from the `custom_components/panasonic_bluray/` directory (folder) in this repository.
 5. Place the files you downloaded in the new directory (folder) you created.
 6. Restart Home Assistant
 
 ## Configuration
+There is a config flow for this integration. After installing the custom component and restarting:
 
-Edit `configuration.yaml` and add `panasonic_remote` as a new `remote` and `media_player`
-
-```yaml
-media_player:
-  - platform: panasonic_bluray
-    name: Panasonic Blu-Ray Media Player
-    host: 192.168.1.2
-...
-remote:
-  - platform: panasonic_bluray
-    name: Panasonic Blu-Ray remote
-    host: 192.168.1.2
+1. Navigate to **Settings** -> **Integrations** and click on **Add an integration**
+2. Configure the `host` or `IP address` of the Panasonic Bluray Player
+3. Click Submit and select your device area.
+4. You should see the new device with the 2 entities : Media Player and Remote Control
 ```
 
 Name|Required|Description|Default
