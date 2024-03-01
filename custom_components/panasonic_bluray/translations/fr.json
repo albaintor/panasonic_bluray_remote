@@ -1,0 +1,33 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "L'appareil est déjà configuré"
+    },
+    "error": {
+      "cannot_connect": "Echec de la connexion",
+      "unknown": "Erreur inconnue"
+    },
+    "step": {
+      "user": {
+        "data": {
+          "host": "Hôte"
+        }
+      },
+      "zeroconf_confirm": {
+        "data": {
+          "host": "Hôte"
+        },
+        "title": "Lecteur Panasonic"
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "host": "Hôte"
+        }
+      }
+    }
+  }
+}

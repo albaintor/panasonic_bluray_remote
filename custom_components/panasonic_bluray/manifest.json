@@ -1,0 +1,14 @@
+{
+  "domain": "panasonic_bluray",
+  "name": "Panasonic Blu-Ray",
+  "config_flow": true,
+  "documentation": "https://github.com/albaintor/panasonic_bluray_remote",
+  "codeowners": ["@albaintor"],
+  "iot_class": "local_polling",
+  "integration_type": "device",
+  "loggers": ["panacotta"],
+  "version": "1.0.0",
+  "requirements": ["panacotta==0.2"],
+  "ssdp": [],
+  "zeroconf": []
+}

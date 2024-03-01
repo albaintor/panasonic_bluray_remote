@@ -25,15 +25,16 @@ Use [HACS](https://hacs.xyz/).
 
 ## Configuration
 
-Edit `configuration.yaml` and add `panasonic_remote` as a new `remote`
+Edit `configuration.yaml` and add `panasonic_remote` as a new `remote` and `media_player`
 
 ```yaml
 media_player:
-  - platform: panasonic_remote
+  - platform: panasonic_bluray
     name: Panasonic Blu-Ray Media Player
     host: 192.168.1.2
+...
 remote:
-  - platform: panasonic_remote
+  - platform: panasonic_bluray
     name: Panasonic Blu-Ray remote
     host: 192.168.1.2
 ```
