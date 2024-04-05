@@ -57,6 +57,7 @@ STOP|Stop
 SKIPFWD|Next chapter
 SKIPREV|Previous chapter
 REV|Rewind
+CUE|Fast forward
 D0|0
 D1|1
 D2|2
