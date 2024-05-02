@@ -47,6 +47,8 @@ Available commands for remote entity :
 
 Command|Description
 --|--
+POWERON|Power on
+POWEROFF|Power off
 POWER|Power toggle
 OP_CL|Open/close
 PLAYBACK|Play
@@ -56,18 +58,18 @@ SKIPFWD|Next chapter
 SKIPREV|Previous chapter
 REV|Rewind
 CUE|Fast forward
-D0|0
-D1|1
-D2|2
-D3|3
-D4|4
-D5|5
-D6|6
-D7|7
-D8|8
-D9|9
+D0|0 (-,)
+D1|1 (@.)
+D2|2 (ABC)
+D3|3 (DEF)
+D4|4 (GHI)
+D5|5 (JKL)
+D6|6 (MNO)
+D7|7 (PQRS)
+D8|8 (TUV)
+D9|9 (WXYZ)
 D12|12
-SHARP|#
+SHARP|# ([_])
 CLEAR|* or cancel
 UP|Up
 DOWN|Down
@@ -106,14 +108,24 @@ AUDIOSEL|Audio language
 KEYS|Keys
 CUE|Cue
 CHROMA|Chrooma
-MNBACK|MNBACK
-MNSKIP|MNSKIP
+MNBACK|Manual skip -10s
+MNSKIP|Manual skip +60s
 2NDARY|2NDARY
 PICTMD|PICTMD
 DETAIL|DETAIL
 RESOLUTN|Resolution
 OSDONOFF|OSD ON/OFF
 P_IN_P|Picture in picture
+PLAYBACKINFO|Playback Info	 
+CLOSED_CAPTION|Closed Caption
+TITLEONOFF|Subtitle
+HDR_PICTUREMODE|HDR Picture Mode
+PICTURESETTINGS|Picture Setting
+SOUNDEFFECT|Soud Effect
+HIGHCLARITY|High clarity
+SKIP_THE_TRAILER|Skip The Trailer
+MIRACAST|Mirroring
+
 
 ## Examples
 To trigger additional commands with the remote entity :
