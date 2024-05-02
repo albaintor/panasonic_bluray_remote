@@ -38,11 +38,9 @@ There is a config flow for this integration. After installing the custom compone
 2. Configure the `host` or `IP address` of the Panasonic Bluray Player
 3. Click Submit and select your device area.
 4. You should see the new device with the 2 entities : Media Player and Remote Control
-```
-
 Name|Required|Description|Default
 --|--|--|--
-`name`|no|Friendly name|liveboxtvuhd
+`name`|no|Friendly name|Panasonic bluray
 `host`|yes|Host or ip address| 
 
 Available commands for remote entity :
